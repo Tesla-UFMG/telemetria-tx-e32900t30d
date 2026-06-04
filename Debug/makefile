@@ -60,8 +60,8 @@ all: main-build
 main-build: TELEMETRIAV4_TX.elf secondary-outputs
 
 # Tool invocations
-TELEMETRIAV4_TX.elf TELEMETRIAV4_TX.map: $(OBJS) $(USER_OBJS) /home/lucas/STM32CubeIDE/workspace_1.19.0/TELEMETRIAV4_TX_antigo/TELEMETRIAV4_TX/STM32U535CCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TELEMETRIAV4_TX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m33 -T"/home/lucas/STM32CubeIDE/workspace_1.19.0/TELEMETRIAV4_TX_antigo/TELEMETRIAV4_TX/STM32U535CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TELEMETRIAV4_TX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+TELEMETRIAV4_TX.elf TELEMETRIAV4_TX.map: $(OBJS) $(USER_OBJS) /home/lucas/Downloads/TELEMETRIAV4_TX(2)/TELEMETRIAV4_TX/STM32U535CCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "TELEMETRIAV4_TX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m33 -T"/home/lucas/Downloads/TELEMETRIAV4_TX(2)/TELEMETRIAV4_TX/STM32U535CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TELEMETRIAV4_TX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
